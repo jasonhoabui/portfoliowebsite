@@ -44,7 +44,7 @@ export default function Honors() {
             >
               <h2 className="text-3xl mb-2 text-white">masters in tft | 2023 - 2024</h2>
               <p className="text-xl">
-                achieved master rank (top 0.5%)in teamfight tactics during sets 9, 11, and 12.
+                achieved master rank (top 0.5%) in teamfight tactics during sets 9, 11, and 12.
               </p>
             </motion.div>
           </div>
