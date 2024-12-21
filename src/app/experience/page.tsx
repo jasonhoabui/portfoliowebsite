@@ -19,14 +19,14 @@ export default function Experience() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              <h2 className="text-3xl mb-2 text-white">undergraduate research assistant | 2024 - present</h2>
+              <h2 className="text-3xl mb-2 text-white">undergraduate research assistant | wip</h2>
               <p className="text-xl">
-                department of statistics and applied probability, ucsb
+                wip
               </p>
               <ul className="list-disc ml-5 mt-4 space-y-2 text-xl">
-                <li>working with professor under [specific research area]</li>
-                <li>analyzing data using [tools/methods]</li>
-                <li>collaborating with team members on [specific projects]</li>
+                <li>wip</li>
+                <li>wip</li>
+                <li>wip</li>
               </ul>
             </motion.div>
           </div>
@@ -38,14 +38,14 @@ export default function Experience() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
             >
-              <h2 className="text-3xl mb-2 text-white">data science intern | summer 2024</h2>
+              <h2 className="text-3xl mb-2 text-white">data science intern | wip</h2>
               <p className="text-xl">
-                [company name]
+                wip
               </p>
               <ul className="list-disc ml-5 mt-4 space-y-2 text-xl">
-                <li>developed and implemented [specific project]</li>
-                <li>analyzed large datasets using [tools]</li>
-                <li>collaborated with team to [achievement]</li>
+                <li>wip</li>
+                <li>wip</li>
+                <li>wip</li>
               </ul>
             </motion.div>
           </div>

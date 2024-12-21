@@ -19,19 +19,17 @@ export default function Research() {
           >
             <h2 className="text-3xl mb-4 text-white">current research</h2>
             <p className="text-xl mb-6">
-              working with professor alexander smith in the department of statistics 
-              and applied probability at ucsb.
+              wip
             </p>
             <ul className="list-disc ml-5 space-y-4 text-xl">
               <li>
-                exploring statistical methods in machine learning and their applications 
-                in real-world data analysis
+                wip
               </li>
               <li>
-                developing algorithms to improve efficiency in large-scale data processing
+                wip
               </li>
               <li>
-                investigating novel approaches to predictive modeling in complex systems
+                wip
               </li>
             </ul>
           </motion.div>
