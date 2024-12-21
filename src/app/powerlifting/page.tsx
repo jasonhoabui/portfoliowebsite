@@ -29,7 +29,7 @@ export default function Powerlifting() {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="text-2xl text-gray-400"
           >
-            i hover around 150-160lbs bw. i've never lifted in competition but plan to register for my first meet in 2025.
+            i hover around 150-160lbs bw. i&apos;ve never lifted in competition but plan to register for my first meet in 2025.
           </motion.p>
         </div>
 
