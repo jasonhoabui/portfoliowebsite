@@ -36,6 +36,17 @@ export default function Honors() {
                 commitment to language learning and cultural understanding.
               </p>
             </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+            >
+              <h2 className="text-3xl mb-2 text-white">masters in tft | 2023 - 2024</h2>
+              <p className="text-xl">
+                achieved master rank in teamfight tactics during sets 9, 11, and 12.
+              </p>
+            </motion.div>
           </div>
         </motion.div>
       </section>
