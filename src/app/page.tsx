@@ -81,7 +81,7 @@ export default function Home() {
               priority
             />
           </a>
-          <a href="https://drive.google.com/file/d/1K65rNaVpzT3dgBOJrfB14DMvBcFaE5jm/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="text-gray-400 mt-2 text-xl hover:text-blue-400 transition-colors">
+          <a href="https://drive.google.com/file/d/1xU2Pt5Jw5KFZCInBsuJgjqs0mnL63kbM/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="text-gray-400 mt-2 text-xl hover:text-blue-400 transition-colors">
             (resume)
           </a>
         </motion.div>
