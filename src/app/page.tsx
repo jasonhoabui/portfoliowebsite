@@ -71,7 +71,7 @@ export default function Home() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <a href="https://drive.google.com/file/d/1K65rNaVpzT3dgBOJrfB14DMvBcFaE5jm/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+          <a href="https://drive.google.com/file/d/1xU2Pt5Jw5KFZCInBsuJgjqs0mnL63kbM/view?usp=sharing" target="_blank" rel="noopener noreferrer">
             <Image
               src="/images/profile.jpg"
               alt="Jason Bui"
