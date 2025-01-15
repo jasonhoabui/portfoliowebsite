@@ -13,12 +13,12 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <main className="min-h-screen relative pb-32">
-          <nav className="fixed top-0 right-0 p-8 w-full">
+          <nav className="fixed top-0 right-0 p-4 md:p-8 w-full">
             <motion.ul 
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="flex gap-8 text-sm justify-end mr-8 lowercase"
+              className="flex flex-wrap gap-3 md:gap-8 text-xs md:text-sm justify-center md:justify-end mr-0 md:mr-8 lowercase"
             >
               <li>
                 <Link href="/" className="text-white hover:text-blue-400 transition-colors">
@@ -54,8 +54,8 @@ export default function RootLayout({
           </nav>
           {children}
 
-          <footer className="absolute bottom-0 left-0 w-full p-8">
-            <div className="max-w-5xl mx-auto px-16 flex flex-col items-center">
+          <footer className="absolute bottom-0 left-0 w-full p-4 md:p-8">
+            <div className="max-w-5xl mx-auto px-4 md:px-16 flex flex-col items-center">
               <div className="text-gray-400 text-sm space-y-1 text-center">
                 <p>jasonhoabui@gmail.com</p>
                 <p>jasonbui420@ucsb.edu</p>

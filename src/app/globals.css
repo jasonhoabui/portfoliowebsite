@@ -11,4 +11,12 @@ body {
   color: rgb(var(--foreground-rgb));
   background: rgb(var(--background-rgb));
   font-family: 'Calibri', system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Add responsive padding for main content */
+@media (max-width: 768px) {
+  .min-h-screen {
+    padding-bottom: 16rem;
+  }
 }
