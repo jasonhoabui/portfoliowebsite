@@ -15,11 +15,11 @@ export default function Powerlifting() {
             transition={{ duration: 0.5 }}
             className="mb-16"
           >
-            <h2 className="text-3xl mb-8 text-white">total: 885 lbs</h2>
+            <h2 className="text-3xl mb-8 text-white">total: 910 lbs</h2>
             <div className="space-y-4 text-2xl text-gray-400">
-              <p>squat | 305 lbs</p>
-              <p>bench | 225 lbs</p>
-              <p>deadlift | 355 lbs</p>
+              <p>squat | 315 lbs</p>
+              <p>bench | 230 lbs</p>
+              <p>deadlift | 365 lbs</p>
             </div>
           </motion.div>
 
