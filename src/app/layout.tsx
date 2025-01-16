@@ -13,6 +13,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <title>jason</title>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
       <body>
         <main className="min-h-screen relative pb-32">
