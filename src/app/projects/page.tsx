@@ -17,7 +17,7 @@ export default function Projects() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <h2 className="text-3xl mb-2 text-white">gambot | 2024</h2>
+            <h2 className="text-3xl mb-2 text-white">gambot</h2>
             <p className="text-xl mb-4">
               python-based discord bot for real-time betting analysis.
             </p>
@@ -33,7 +33,7 @@ export default function Projects() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
-            <h2 className="text-3xl mb-2 text-white">tftstatchecker | 2024</h2>
+            <h2 className="text-3xl mb-2 text-white">tftstatchecker</h2>
             <p className="text-xl mb-4">
               tft analytics tool using riot games api.
             </p>
@@ -49,7 +49,7 @@ export default function Projects() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.6 }}
           >
-            <h2 className="text-3xl mb-2 text-white">wordle clone | 2024</h2>
+            <h2 className="text-3xl mb-2 text-white">wordle clone</h2>
             <p className="text-xl mb-4">
               recreated the popular word-guessing game using react and typescript.
             </p>
