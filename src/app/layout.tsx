@@ -11,6 +11,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <title>jason</title>
+      </head>
       <body>
         <main className="min-h-screen relative pb-32">
           <nav className="fixed top-0 right-0 p-4 md:p-8 w-full">
