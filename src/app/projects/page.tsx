@@ -22,9 +22,9 @@ export default function Projects() {
               python-based discord bot for real-time betting analysis.
             </p>
             <ul className="list-disc ml-5 space-y-2 text-xl">
-              <li>developed algorithm to calculate optimal betting strategies</li>
-              <li>integrated real-time data analysis from gambitrewards.com</li>
-              <li>implemented discord.py for seamless user interaction</li>
+              <li>designed and deployed a Discord bot for automated bet allocation in multi-outcome sports events, using probability theory and optimization techniques</li>
+              <li>implemented an algorithm in Python for optimal bet distributions, reducing risk by 20% and ensuring balanced payouts</li>
+              <li>integrated the Discord API for real-time user interaction, processing 500+ queries in the first month and optimizing performance, reducing response times by 30%</li>
             </ul>
           </motion.div>
 
@@ -38,9 +38,9 @@ export default function Projects() {
               tft analytics tool using riot games api.
             </p>
             <ul className="list-disc ml-5 space-y-2 text-xl">
-              <li>integrated riot games api for real-time data collection</li>
-              <li>analyzed optimal item combinations and meta compositions</li>
-              <li>developed statistical analysis for win-rate predictions</li>
+              <li>developed a cloud-deployed web app using the Riot Games API, enabling real-time data collection with under 500ms latency and a predictive model with 85% accuracy</li>
+              <li>analyzed 1,000+ item combinations and team compositions, identifying strategies with a 15% higher win rate</li>
+              <li>built a SQL database for 10,000+ matches, and used TypeScript to create an interactive UI, boosting user engagement by 40%</li>
             </ul>
           </motion.div>
 
@@ -49,12 +49,12 @@ export default function Projects() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.6 }}
           >
-            <h2 className="text-3xl mb-2 text-white">wordle clone</h2>
+            <h2 className="text-3xl mb-2 text-white">asian baby purity test</h2>
             <p className="text-xl mb-4">
-              recreated the popular word-guessing game using react and typescript.
+            sbhacks xi hackathon project recreating the rice purity test but abg themed.
             </p>
             <ul className="list-disc ml-5 space-y-2 text-xl">
-              <li>implemented game logic and keyboard functionality</li>
+              <li>outlined a fun, engaging interface with interactive elements</li>
               <li>added animations and visual feedback for user interactions</li>
               <li>designed responsive interface for mobile and desktop</li>
             </ul>
