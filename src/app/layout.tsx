@@ -64,9 +64,6 @@ export default function RootLayout({
           <footer className="absolute bottom-0 left-0 w-full p-4 md:p-8">
             <div className="max-w-5xl mx-auto px-4 md:px-16 flex flex-col items-center">
               <div className="text-gray-400 text-sm space-y-1 text-center">
-                <p>jasonhoabui@gmail.com</p>
-                <p>jasonbui420@ucsb.edu</p>
-                <p>+1 657 667 9973</p>
               </div>
               <p className="text-gray-500 text-sm mt-4">
                 ©{new Date().getFullYear()} by jason bui
