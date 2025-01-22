@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 import './globals.css'
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/react"
 
 export default function RootLayout({
   children,
@@ -59,6 +60,7 @@ export default function RootLayout({
           </nav>
           {children}
           <SpeedInsights />
+          <Analytics />
           <footer className="absolute bottom-0 left-0 w-full p-4 md:p-8">
             <div className="max-w-5xl mx-auto px-4 md:px-16 flex flex-col items-center">
               <div className="text-gray-400 text-sm space-y-1 text-center">
