@@ -51,7 +51,7 @@ export default function Projects() {
           >
             <h2 className="text-3xl mb-2 text-white">willyoubemines</h2>
             <p className="text-xl mb-4">
-              valentine's day '25 invitation for your significant other.
+              valentine&apos;s day &apos;25 invitation for your significant other.
             </p>
             <ul className="list-disc ml-5 space-y-2 text-xl">
               <li>fun, 2 hour mini-project created at 1 am on a sunday night</li>
@@ -72,7 +72,7 @@ export default function Projects() {
             <ul className="list-disc ml-5 space-y-2 text-xl">
               <li>originally went to hackathon only for food and snacks</li>
               <li>decided last minute to create brainrot to win best joke hack</li>
-              <li>teammate flaked on me, didn't pitch to judges unfortunately</li>
+              <li>teammate flaked on me, didn&apos;t pitch to judges unfortunately</li>
             </ul>
           </motion.div>
         </motion.div>
