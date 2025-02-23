@@ -1,32 +1,33 @@
 'use client';
 
-import Link from 'next/link'
-import Image from 'next/image'
-import { motion } from 'framer-motion'
-import { FaGithub, FaLinkedin } from 'react-icons/fa'
-import { MdEmail } from 'react-icons/md'
+import Link from 'next/link';
+import Image from 'next/image';
+import { motion } from 'framer-motion';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { MdEmail } from 'react-icons/md';
+import Spotify from '@/components/Spotify';
 
 export default function Home() {
   return (
-    <div className="max-w-6xl mx-auto px-4 md:px-16">
-      <div className="mt-24 md:mt-48 flex flex-col md:flex-row gap-8 md:gap-16">
+    <div className="max-w-6xl mx-auto px-16">
+      <div className="mt-48 flex gap-16">
         {/* Left column - Text content */}
         <div className="flex-1">
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="text-4xl md:text-8xl font-light mb-4 lowercase"
+            className="text-8xl font-light mb-4 lowercase whitespace-nowrap"
           >
             hi, i&apos;m 
-            <span className="block text-blue-400 text-4xl md:text-8xl">jason bui</span>
+            <span className="block text-blue-400 text-8xl">jason bui</span>
           </motion.h1>
 
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-xl md:text-3xl mb-6 md:mb-12 lowercase text-gray-400"
+            className="text-3xl mb-12 lowercase text-gray-400"
           >
             stats @ ucsb | powerlifter, cat lover
           </motion.p>
@@ -35,7 +36,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="text-lg md:text-2xl mb-6 md:mb-10 lowercase text-gray-400"
+            className="text-2xl mb-10 lowercase text-gray-400"
           >
             i enjoy research, working with data, and lifting weights.
           </motion.p>
@@ -75,17 +76,26 @@ export default function Home() {
             <Image
               src="/images/profile.jpg"
               alt="Jason Bui"
-              width={300}
-              height={300}
-              className="rounded-lg w-[250px] md:w-[400px] h-auto"
+              width={400}
+              height={400}
+              className="rounded-lg"
               priority
             />
           </a>
-          <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="text-gray-400 mt-2 text-lg md:text-xl hover:text-blue-400 transition-colors">
+          <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="text-gray-400 mt-2 text-xl hover:text-blue-400 transition-colors">
             (resume)
           </a>
         </motion.div>
       </div>
+
+      {/* Add Spotify component */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
+      >
+        <Spotify />
+      </motion.div>
     </div>
-  )
+  );
 }
