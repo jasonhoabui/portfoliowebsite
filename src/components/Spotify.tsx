@@ -1,10 +1,19 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-interface NowPlayingData {
+interface Track {
+  id: string;
+  title: string;
+  artist: string;
+  album: string;
+  albumImageUrl: string;
+  songUrl: string;
+}
+
+interface NowPlaying {
   isPlaying: boolean;
   title?: string;
   artist?: string;
@@ -14,54 +23,86 @@ interface NowPlayingData {
 }
 
 export default function Spotify() {
-  const [nowPlaying, setNowPlaying] = useState<NowPlayingData | null>(null);
+  const [nowPlaying, setNowPlaying] = React.useState<NowPlaying | null>(null);
+  const [recentTracks, setRecentTracks] = React.useState<Track[]>([]);
 
-  useEffect(() => {
-    const fetchSpotifyData = async () => {
+  React.useEffect(() => {
+    async function fetchData() {
       try {
-        const response = await fetch('/api/spotify/now-playing');
-        const data = await response.json();
-        setNowPlaying(data);
+        const [nowRes, recentRes] = await Promise.all([
+          fetch('/api/spotify/now-playing'),
+          fetch('/api/spotify/recently-played')
+        ]);
+
+        const [nowData, recentData] = await Promise.all([
+          nowRes.json(),
+          recentRes.json()
+        ]);
+
+        setNowPlaying(nowData);
+        setRecentTracks(recentData.tracks);
       } catch (error) {
-        console.error('Error fetching Spotify data:', error);
+        console.error('Error:', error);
       }
-    };
+    }
 
-    fetchSpotifyData();
-    const interval = setInterval(fetchSpotifyData, 30000); // Update every 30 seconds
-
+    fetchData();
+    const interval = setInterval(fetchData, 30000);
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <div className="w-full max-w-6xl mx-auto px-4 py-8">
-      <div className="flex flex-col gap-8">
-        <div className="bg-black/50 backdrop-blur-sm p-4 rounded-lg">
-          <h2 className="text-xl mb-4 text-gray-300">Now Playing</h2>
-          {nowPlaying?.isPlaying ? (
-            <div className="flex items-center gap-4">
-              <Image
-                src={nowPlaying.albumImageUrl!}
-                alt={nowPlaying.album!}
-                width={60}
-                height={60}
-                className="rounded"
-              />
-              <div>
-                <Link 
-                  href={nowPlaying.songUrl!}
-                  target="_blank"
-                  className="text-white hover:text-blue-400"
-                >
-                  {nowPlaying.title}
-                </Link>
-                <p className="text-gray-400">{nowPlaying.artist}</p>
-              </div>
+    <div className="w-full max-w-7xl mx-auto px-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mt-20">
+        {/* Now Playing - Left Side */}
+        {nowPlaying?.isPlaying && (
+          <section className="w-full">
+            <h2 className="text-2xl font-bold mb-4">currently listening to</h2>
+            <div className="w-full">
+              <Link href={nowPlaying.songUrl || ''} target="_blank" className="block w-full">
+                <div className="hover:bg-black/30 transition-colors rounded-lg p-6">
+                  <Image
+                    src={nowPlaying.albumImageUrl || ''}
+                    alt={nowPlaying.album || ''}
+                    width={300}
+                    height={300}
+                    className="rounded-md w-full"
+                  />
+                  <div className="mt-4">
+                    <div className="text-white text-xl font-medium">{nowPlaying.title}</div>
+                    <div className="text-gray-400 text-base mt-1">{nowPlaying.artist}</div>
+                  </div>
+                </div>
+              </Link>
             </div>
-          ) : (
-            <p className="text-gray-400">Not playing</p>
-          )}
-        </div>
+          </section>
+        )}
+
+        {/* Recently Played - Right Side */}
+        {recentTracks.length > 0 && (
+          <section className="w-full">
+            <h2 className="text-2xl font-bold mb-4">recently listened to</h2>
+            <div className="w-full space-y-3">
+              {recentTracks.slice(0, 5).map((track) => (
+                <Link key={track.id} href={track.songUrl} target="_blank" className="block w-full">
+                  <div className="hover:bg-black/30 transition-colors rounded-lg p-3 flex items-center gap-4">
+                    <Image
+                      src={track.albumImageUrl}
+                      alt={track.album}
+                      width={56}
+                      height={56}
+                      className="rounded-md"
+                    />
+                    <div className="flex-1">
+                      <div className="text-white text-sm font-medium">{track.title}</div>
+                      <div className="text-gray-400 text-xs">{track.artist}</div>
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </section>
+        )}
       </div>
     </div>
   );
