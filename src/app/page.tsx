@@ -6,7 +6,6 @@ import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 import Spotify from '@/components/Spotify';
-import InstagramFeed from '@/components/InstagramFeed';
 
 export default function Home() {
   return (
