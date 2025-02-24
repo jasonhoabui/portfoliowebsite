@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 import Spotify from '@/components/Spotify';
+import InstagramFeed from '@/components/InstagramFeed';
 
 export default function Home() {
   return (
@@ -88,13 +89,22 @@ export default function Home() {
         </motion.div>
       </div>
 
-      {/* Add Spotify component */}
+      {/* Spotify component first */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.5 }}
       >
         <Spotify />
+      </motion.div>
+
+      {/* Instagram feed below Spotify */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.6 }}
+      >
+        <InstagramFeed />
       </motion.div>
     </div>
   );
