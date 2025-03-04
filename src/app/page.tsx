@@ -96,24 +96,6 @@ export default function Home() {
       >
         <Spotify />
       </motion.div>
-
-      <motion.div className="flex gap-6 text-blue-400">
-        <a href="https://leetcode.com/u/jasonhoabui" target="_blank" rel="noopener noreferrer">
-          <img 
-            src="https://leetcode-stats.vercel.app/api?username=jasonhoabui&theme=Dark" 
-            alt="jasonhoabui's LeetCode Stats" 
-            className="mt-4"
-          />
-        </a>
-        <a href="https://github.com/jasonhoabui" target="_blank" rel="noopener noreferrer">
-          <img 
-            src="https://github-readme-stats.vercel.app/api?username=jasonhoabui&theme=dark&show_icons=true&hide_border=true&count_private=false" 
-            alt="jasonhoabui's GitHub Stats" 
-            className="mt-4"
-          />
-        </a>
-      </motion.div>
-
     </div>
   );
 }
