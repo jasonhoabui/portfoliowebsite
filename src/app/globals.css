@@ -12,9 +12,15 @@ body {
   background: rgb(var(--background-rgb));
   font-family: 'Calibri', system-ui, sans-serif;
   overflow-x: hidden;
+  background-color: white;
+  color: black;
 }
 
-/* Add responsive padding for main content */
+body.dark {
+  background-color: black;
+  color: white;
+}
+
 @media (max-width: 768px) {
   .min-h-screen {
     padding-bottom: 16rem;

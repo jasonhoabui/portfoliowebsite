@@ -54,7 +54,6 @@ export default function Spotify() {
   return (
     <div className="w-full max-w-7xl mx-auto px-8">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mt-20">
-        {/* Now Playing - Left Side */}
         {nowPlaying?.isPlaying && (
           <section className="w-full">
             <h2 className="text-2xl font-bold mb-4">currently listening to</h2>
@@ -78,7 +77,6 @@ export default function Spotify() {
           </section>
         )}
 
-        {/* Recently Played - Right Side */}
         {recentTracks.length > 0 && (
           <section className="w-full">
             <h2 className="text-2xl font-bold mb-4">recently listened to</h2>

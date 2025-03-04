@@ -31,7 +31,6 @@ export default function Experience() {
             </motion.div>
           </div>
 
-          {/* Work Experience */}
           <div className="space-y-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}

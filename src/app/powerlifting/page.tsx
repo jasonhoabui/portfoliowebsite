@@ -7,7 +7,6 @@ export default function Powerlifting() {
   return (
     <div className="max-w-6xl mx-auto px-16">
       <div className="mt-48 flex gap-16">
-        {/* Left column - Stats */}
         <div className="flex-1">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -33,7 +32,6 @@ export default function Powerlifting() {
           </motion.p>
         </div>
 
-        {/* Right column - Instagram Link */}
         <div className="flex-1 flex flex-col items-center justify-center">
           <motion.div 
             initial={{ opacity: 0, x: 20 }}
