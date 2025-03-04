@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { MapPin, Building, Music, Layers } from "lucide-react";
 
@@ -50,10 +51,12 @@ export default function Home() {
       <div className="mt-48 flex flex-col items-center gap-16">
         
         <div className="flex-1 text-left w-full max-w-xl mx-auto relative">
-          <img 
+          <Image 
             src="/images/profile.jpg"
             alt="Profile"
             className="absolute top-0 right-0 w-32 h-32 rounded-full object-cover"
+            width={128}
+            height={128}
           />
 
           <h1 
