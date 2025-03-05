@@ -12,10 +12,8 @@ export default function Research() {
       setIsDarkMode(darkModeActive);
     };
 
-    // Check initial theme
     checkTheme();
 
-    // Optional: Add a mutation observer to detect theme changes
     const observer = new MutationObserver(checkTheme);
     observer.observe(document.body, {
       attributes: true,
@@ -39,21 +37,50 @@ export default function Research() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <h2 className={`text-2xl mb-4 text-blue-400`}>current research</h2>
-            <p className={`text-l mb-6 ${isDarkMode ? 'text-white' : 'text-black'}`}>
-              wip
-            </p>
-            <ul className={`list-disc ml-5 space-y-4 text-m ${isDarkMode ? 'text-white' : 'text-black'}`}>
-              <li>
-                wip
-              </li>
-              <li>
-                wip
-              </li>
-              <li>
-                wip
-              </li>
-            </ul>
+            <motion.h2 
+              className={`text-2xl mb-4 text-blue-400`}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+            >
+              current research
+            </motion.h2>
+            <motion.p 
+              className={`text-l mb-6 ${isDarkMode ? 'text-white' : 'text-black'}`}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
+              soon™
+            </motion.p>
+            <motion.ul 
+              className={`list-disc ml-5 space-y-4 text-m ${isDarkMode ? 'text-white' : 'text-black'}`}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+            >
+              <motion.li
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+              >
+                soon™
+              </motion.li>
+              <motion.li
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.5 }}
+              >
+                soon™
+              </motion.li>
+              <motion.li
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.6 }}
+              >
+                soon™
+              </motion.li>
+            </motion.ul>
           </motion.div>
 
           <motion.div
@@ -62,16 +89,57 @@ export default function Research() {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="mt-12"
           >
-            <h2 className={`text-2xl mb-4 text-blue-400`}>research interests</h2>
-            <p className={`text-l mb-6 ${isDarkMode ? 'text-white' : 'text-black'}`}>
-              wip
-            </p>
-            <ul className={`list-disc ml-5 space-y-4 text-m ${isDarkMode ? 'text-white' : 'text-black'}`}>
-              <li>machine learning and statistical modeling</li>
-              <li>data analysis and visualization</li>
-              <li>predictive analytics</li>
-              <li>computational statistics</li>
-            </ul>
+            <motion.h2 
+              className={`text-2xl mb-4 text-blue-400`}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+            >
+              research interests
+            </motion.h2>
+            <motion.p 
+              className={`text-l mb-6 ${isDarkMode ? 'text-white' : 'text-black'}`}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+            >
+              soon™
+            </motion.p>
+            <motion.ul 
+              className={`list-disc ml-5 space-y-4 text-m ${isDarkMode ? 'text-white' : 'text-black'}`}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.7 }}
+            >
+              <motion.li
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.8 }}
+              >
+                soon™
+              </motion.li>
+              <motion.li
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.9 }}
+              >
+                soon™
+              </motion.li>
+              <motion.li
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 1.0 }}
+              >
+                soon™
+              </motion.li>
+              <motion.li
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 1.1 }}
+              >
+                soon™
+              </motion.li>
+            </motion.ul>
           </motion.div>
         </motion.div>
       </section>
