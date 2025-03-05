@@ -99,7 +99,7 @@ export default function Home() {
             transition={{ duration: 0.5, delay: 0.4 }}
           >
             <Music className={`mr-2 ${isDarkMode ? 'text-white' : 'text-black'}`} />
-            last listened to {currentTrack ? currentTrack : ''}
+            listening to {currentTrack ? currentTrack.toLowerCase() : ''}
           </motion.p>
           <motion.p 
             className={`text-xs mb-4 flex items-center ${isDarkMode ? 'text-white' : 'text-black'}`}
@@ -181,7 +181,7 @@ export default function Home() {
             transition={{ duration: 0.5, delay: 1.0 }}
           >
             i love to eat fast food, especially <span className="text-blue-400">wingstop</span>. my go-to order is an{' '}
-            <span className="text-blue-400">all-in bundle</span> (6 hot honey tenders, 16 boneless sweet chili glaze, lemon pepper large fries).
+            <span className="text-blue-400">all-in bundle</span> (6 hot honey tenders, 16 boneless sweet chili glaze, large lemon pepper fries).
           </motion.p>
 
           <div className="flex gap-6">
