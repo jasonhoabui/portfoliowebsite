@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { MapPin, Building, Music, Layers } from "lucide-react";
+import { motion } from 'framer-motion';
 
 export default function Home() {
   const [isDarkMode, setIsDarkMode] = useState(true);
@@ -48,9 +49,14 @@ export default function Home() {
 
   return (
     <div className="max-w-6xl mx-auto px-16">
-      <div className="mt-48 flex flex-col items-center gap-16">
+      <div className="mt-10 flex flex-col items-center gap-16">
         
-        <div className="flex-1 text-left w-full max-w-xl mx-auto relative">
+        <motion.div 
+          className="flex-1 text-left w-full max-w-xl mx-auto relative"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
           <Image 
             src="/images/profile.jpg"
             alt="Profile"
@@ -59,39 +65,58 @@ export default function Home() {
             height={128}
           />
 
-          <h1 
-            className={`text-xl font-light mb-4 lowercase whitespace-nowrap ${isDarkMode ? 'text-white' : 'text-black'}`}
+          <motion.h1 
+            className={`text-2xl font-light mb-4 lowercase whitespace-nowrap ${isDarkMode ? 'text-white' : 'text-black'}`}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
           >
             <span className="block text-blue-400 text-xl">jason bui</span>
-          </h1>
+          </motion.h1>
 
-          <p 
+          <motion.p 
             className={`text-xs mb-4 flex items-center ${isDarkMode ? 'text-white' : 'text-black'}`}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
           >
             <MapPin className={`mr-2 ${isDarkMode ? 'text-white' : 'text-black'}`} />
             garden grove, ca
-          </p>
-          <p 
+          </motion.p>
+          <motion.p 
             className={`text-xs mb-4 flex items-center ${isDarkMode ? 'text-white' : 'text-black'}`}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
           >
             <Building className={`mr-2 ${isDarkMode ? 'text-white' : 'text-black'}`} />
             unemployed :/
-          </p>
-          <p 
+          </motion.p>
+          <motion.p 
             className={`text-xs mb-4 flex items-center ${isDarkMode ? 'text-white' : 'text-black'}`}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
           >
             <Music className={`mr-2 ${isDarkMode ? 'text-white' : 'text-black'}`} />
             last listened to {currentTrack ? currentTrack : ''}
-          </p>
-          <p 
+          </motion.p>
+          <motion.p 
             className={`text-xs mb-4 flex items-center ${isDarkMode ? 'text-white' : 'text-black'}`}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
           >
             <Layers className={`mr-2 ${isDarkMode ? 'text-white' : 'text-black'}`} />
             python, postgres, typescript
-          </p>
+          </motion.p>
 
-          <p className="mb-4 text-m break-words max-w-[700px]">
-            i&apos;m currently a junior at{' '}
+          <motion.p className="mb-4 text-m break-words max-w-[700px]"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.6 }}
+          >
+            i&apos;m currently a <span className="text-blue-400">junior</span> at{' '}
             <a href="https://www.ucsb.edu/" target="_blank" rel="noopener noreferrer" className={`underline decoration-blue-400 hover:text-blue-300 ${isDarkMode ? 'text-white' : 'text-blue-400'}`}>
               ucsb
             </a>
@@ -100,15 +125,23 @@ export default function Home() {
               statistics
             </a>
             .
-          </p>
+          </motion.p>
 
-          <p className="mb-4 text-m break-words max-w-[700px]">
+          <motion.p className="mb-4 text-m break-words max-w-[700px]"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.7 }}
+          >
             i&apos;m super interested in <span className="text-blue-400">machine learning</span>,{' '}
             <span className="text-blue-400">applied probability</span>, and{' '}
             <span className="text-blue-400">game theory</span>.
-          </p>
+          </motion.p>
 
-          <p className="mb-4 text-m break-words max-w-[700px]">
+          <motion.p className="mb-4 text-m break-words max-w-[700px]"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.8 }}
+          >
             most recently, i&apos;ve been diving into <span className="text-blue-400">poker theory</span>. i love to read about poker strategy and{' '}
             <a 
               href="https://blogs.cornell.edu/info2040/2021/11/03/game-theory-optimal-gto-texas-holdem-poker-theory/" 
@@ -118,48 +151,86 @@ export default function Home() {
             >
               gto
             </a>
-            . my favorite hand is qq.
-          </p>
+            . my favorite player to watch is {' '}
+            <a 
+              href="https://en.wikipedia.org/wiki/Phil_Hellmuth" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className={`underline decoration-blue-400 hover:text-blue-300 ${isDarkMode ? 'text-white' : 'text-blue-400'}`}
+            >
+              phil hellmuth
+            </a>.
+          </motion.p>
 
-          <p className="mb-4 text-n break-words max-w-[700px]">
+          <motion.p className="mb-4 text-n break-words max-w-[700px]"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.9 }}
+          >
             outside of work, you can catch me{' '}
             <a href="https://www.instagram.com/freedatboyjayson/" target="_blank" rel="noopener noreferrer" className={`underline decoration-blue-400 hover:text-blue-300 ${isDarkMode ? 'text-white' : 'text-blue-400'}`}>
               powerlifting
             </a>
             . at <span className="text-blue-400">160</span> lbs bw, i bench <span className="text-blue-400">230</span> lbs, squat{' '}
             <span className="text-blue-400">315</span> lbs, and deadlift <span className="text-blue-400">365</span> lbs.
-          </p>
+          </motion.p>
 
-          <p className="mb-4 text-m break-words max-w-[700px]">
+          <motion.p className="mb-4 text-m break-words max-w-[700px]"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 1.0 }}
+          >
             i love to eat fast food, especially <span className="text-blue-400">wingstop</span>. my go-to order is an{' '}
             <span className="text-blue-400">all-in bundle</span> (6 hot honey tenders, 16 boneless sweet chili glaze, lemon pepper large fries).
-          </p>
+          </motion.p>
 
-          <div 
-            className="flex gap-6"
-          >
-            <Link href="https://github.com/jasonhoabui" target="_blank" 
-              className={`mt-2 text-xl hover:text-blue-400 transition-colors underline decoration-blue-400 ${isDarkMode ? 'text-white' : 'text-black'}`}
+          <div className="flex gap-6">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 1.1 }}
             >
-              github
-            </Link>
-            <Link href="https://www.linkedin.com/in/jasonhbui/" target="_blank" 
-              className={`mt-2 text-xl hover:text-blue-400 transition-colors underline decoration-blue-400 ${isDarkMode ? 'text-white' : 'text-black'}`}
+              <Link href="https://github.com/jasonhoabui" target="_blank" 
+                className={`mt-2 text-l hover:text-blue-400 transition-colors underline decoration-blue-400 ${isDarkMode ? 'text-white' : 'text-black'}`}
+              >
+                github
+              </Link>
+            </motion.div>
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 1.2 }}
             >
-              linkedin
-            </Link>
-            <Link href="mailto:jasonhoabui@gmail.com" 
-              className={`mt-2 text-xl hover:text-blue-400 transition-colors underline decoration-blue-400 ${isDarkMode ? 'text-white' : 'text-black'}`}
+              <Link href="https://www.linkedin.com/in/jasonhbui/" target="_blank" 
+                className={`mt-2 text-l hover:text-blue-400 transition-colors underline decoration-blue-400 ${isDarkMode ? 'text-white' : 'text-black'}`}
+              >
+                linkedin
+              </Link>
+            </motion.div>
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 1.3 }}
             >
-              email
-            </Link>
-            <Link href="/resume.pdf" target="_blank" rel="noopener noreferrer" 
-              className={`mt-2 text-xl hover:text-blue-400 transition-colors underline decoration-blue-400 ${isDarkMode ? 'text-white' : 'text-black'}`}
+              <Link href="mailto:jasonhoabui@gmail.com" 
+                className={`mt-2 text-l hover:text-blue-400 transition-colors underline decoration-blue-400 ${isDarkMode ? 'text-white' : 'text-black'}`}
+              >
+                email
+              </Link>
+            </motion.div>
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 1.4 }}
             >
-              resume
-            </Link>
+              <Link href="/resume.pdf" target="_blank" rel="noopener noreferrer" 
+                className={`mt-2 text-l hover:text-blue-400 transition-colors underline decoration-blue-400 ${isDarkMode ? 'text-white' : 'text-black'}`}
+              >
+                resume
+              </Link>
+            </motion.div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
