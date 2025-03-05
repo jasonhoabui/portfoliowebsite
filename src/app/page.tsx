@@ -105,7 +105,7 @@ export default function Home() {
             <span className="block text-blue-400 text-xl">jason bui</span>
             <span className={`text-xs ${isDarkMode ? 'text-white' : 'text-black'}`}>
               visitors: <span className="text-blue-400">
-                {isLoadingVisitorCount ? 'Loading...' : visitorCount}
+                {isLoadingVisitorCount ? '' : visitorCount}
               </span>
             </span>
           </motion.h1>

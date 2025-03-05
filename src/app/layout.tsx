@@ -74,7 +74,7 @@ export default function RootLayout({
           <SpeedInsights />
           <Analytics />
         </main>
-        <footer className="p-4 md:p-8">
+        <footer className="p-2 md:p-4">
           <div className="max-w-5xl mx-auto px-4 md:px-16 flex flex-col items-center">
             <div className="text-gray-400 text-sm space-y-1 text-center">
             </div>
