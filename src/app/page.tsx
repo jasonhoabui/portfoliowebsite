@@ -55,10 +55,19 @@ export default function Home() {
     const fetchVisitorCount = async () => {
       const response = await fetch('/api/visitorCount');
       const data = await response.json();
+      console.log('Visitor Count Data:', data);
       setVisitorCount(data.count);
     };
 
     fetchVisitorCount();
+  }, []);
+
+  useEffect(() => {
+    const incrementVisitorCount = async () => {
+      await fetch('/api/visitorCount');
+    };
+
+    incrementVisitorCount();
   }, []);
 
   return (
