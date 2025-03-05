@@ -10,7 +10,7 @@ export default function Home() {
   const [isDarkMode, setIsDarkMode] = useState(true);
   const [currentTrack, setCurrentTrack] = useState<string | null>(null);
   const [songUrl, setSongUrl] = useState<string | null>(null);
-  const [visitorCount, setVisitorCount] = useState(0);
+  const [visitorCount, setVisitorCount] = useState<number | null>(null);
 
   useEffect(() => {
     const checkTheme = () => {
@@ -52,22 +52,18 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    const fetchVisitorCount = async () => {
-      const response = await fetch('/api/visitorCount');
-      const data = await response.json();
-      console.log('Visitor Count Data:', data);
-      setVisitorCount(data.count);
+    const fetchAndIncrementVisitorCount = async () => {
+      try {
+        const response = await fetch('/api/visitorCount');
+        const data = await response.json();
+        console.log('Visitor Count Data:', data);
+        setVisitorCount(data.count);
+      } catch (error) {
+        console.error('Error fetching visitor count:', error);
+      }
     };
 
-    fetchVisitorCount();
-  }, []);
-
-  useEffect(() => {
-    const incrementVisitorCount = async () => {
-      await fetch('/api/visitorCount');
-    };
-
-    incrementVisitorCount();
+    fetchAndIncrementVisitorCount();
   }, []);
 
   return (
@@ -95,7 +91,7 @@ export default function Home() {
             transition={{ duration: 0.5, delay: 0.1 }}
           >
             <span className="block text-blue-400 text-xl">jason bui</span>
-            <span className={`text-xs ${isDarkMode ? 'text-white' : 'text-black'}`}> visitors: <span className="text-blue-400">{visitorCount}</span></span>
+            <span className={`text-xs ${isDarkMode ? 'text-white' : 'text-black'}`}> visitors: <span className="text-blue-400">{visitorCount !== null ? visitorCount : 'Loading...'}</span></span>
           </motion.h1>
 
           <motion.p 
