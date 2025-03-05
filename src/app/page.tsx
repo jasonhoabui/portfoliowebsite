@@ -110,7 +110,12 @@ export default function Home() {
 
           <p className="mb-4 text-m break-words max-w-[700px]">
             most recently, i&apos;ve been diving into <span className="text-blue-400">poker theory</span>. i love to read about poker strategy and{' '}
-            <a href="https://blogs.cornell.edu/info2040/2021/11/03/game-theory-optimal-gto-texas-holdem-poker-theory/" target="_blank" rel="noopener noreferrer" className="text-white underline decoration-blue-400 hover:text-blue-300">
+            <a 
+              href="https://blogs.cornell.edu/info2040/2021/11/03/game-theory-optimal-gto-texas-holdem-poker-theory/" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className={`underline decoration-blue-400 hover:text-blue-300 ${isDarkMode ? 'text-white' : 'text-blue-400'}`}
+            >
               gto
             </a>
             . my favorite hand is qq.
