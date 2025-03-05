@@ -11,6 +11,8 @@ export default function Home() {
   const [currentTrack, setCurrentTrack] = useState<string | null>(null);
   const [songUrl, setSongUrl] = useState<string | null>(null);
   const [visitorCount, setVisitorCount] = useState<number | null>(null);
+  const [isLoadingTrack, setIsLoadingTrack] = useState(true);
+  const [isLoadingVisitorCount, setIsLoadingVisitorCount] = useState(true);
 
   useEffect(() => {
     const checkTheme = () => {
@@ -30,8 +32,12 @@ export default function Home() {
   }, []);
 
   const fetchCurrentlyPlaying = async () => {
+    setIsLoadingTrack(true);
     try {
       const response = await fetch('/api/spotify/now-playing');
+      if (!response.ok) {
+        throw new Error('Failed to fetch currently playing track');
+      }
       const data = await response.json();
       if (data.isPlaying) {
         setCurrentTrack(`${data.title} by ${data.artist}`);
@@ -42,6 +48,8 @@ export default function Home() {
       }
     } catch (error) {
       console.error('Error fetching currently playing track:', error);
+    } finally {
+      setIsLoadingTrack(false);
     }
   };
 
@@ -53,13 +61,18 @@ export default function Home() {
 
   useEffect(() => {
     const fetchAndIncrementVisitorCount = async () => {
+      setIsLoadingVisitorCount(true);
       try {
         const response = await fetch('/api/visitorCount');
+        if (!response.ok) {
+          throw new Error('Failed to fetch visitor count');
+        }
         const data = await response.json();
-        console.log('Visitor Count Data:', data);
         setVisitorCount(data.count);
       } catch (error) {
         console.error('Error fetching visitor count:', error);
+      } finally {
+        setIsLoadingVisitorCount(false);
       }
     };
 
@@ -69,7 +82,6 @@ export default function Home() {
   return (
     <div className="max-w-6xl mx-auto px-16">
       <div className="mt-10 flex flex-col items-center gap-16">
-        
         <motion.div 
           className="flex-1 text-left w-full max-w-xl mx-auto relative"
           initial={{ opacity: 0, y: 20 }}
@@ -91,7 +103,11 @@ export default function Home() {
             transition={{ duration: 0.5, delay: 0.1 }}
           >
             <span className="block text-blue-400 text-xl">jason bui</span>
-            <span className={`text-xs ${isDarkMode ? 'text-white' : 'text-black'}`}> visitors: <span className="text-blue-400">{visitorCount !== null ? visitorCount : 'Loading...'}</span></span>
+            <span className={`text-xs ${isDarkMode ? 'text-white' : 'text-black'}`}>
+              visitors: <span className="text-blue-400">
+                {isLoadingVisitorCount ? 'Loading...' : visitorCount}
+              </span>
+            </span>
           </motion.h1>
 
           <motion.p 
@@ -119,7 +135,9 @@ export default function Home() {
             transition={{ duration: 0.5, delay: 0.4 }}
           >
             <Music className={`mr-2 ${isDarkMode ? 'text-white' : 'text-black'}`} />
-            listening to&nbsp;{currentTrack ? (
+            {isLoadingTrack ? (
+              'Loading track...'
+            ) : currentTrack ? (
               <a
                 href={songUrl || '#'}
                 target="_blank"
@@ -127,8 +145,10 @@ export default function Home() {
                 className="hover:text-blue-400 transition-colors underline decoration-blue-300"
               >
                 {currentTrack.toLowerCase()}
-              </a> 
-            ) : ''}
+              </a>
+            ) : (
+              'Not playing'
+            )}
           </motion.p>
           <motion.p 
             className={`text-xs mb-4 flex items-center ${isDarkMode ? 'text-white' : 'text-black'}`}
