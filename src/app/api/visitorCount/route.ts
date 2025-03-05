@@ -24,7 +24,7 @@ async function getAndIncrementLocalCounter(): Promise<number> {
       const data = await fs.readFile(COUNTER_FILE_PATH, 'utf-8');
       count = parseInt(data.trim(), 10) + 1;
       if (isNaN(count)) count = 1;
-    } catch (error) {
+    } catch (_) {
       // File doesn't exist yet, start with 1
       count = 1;
     }
@@ -33,8 +33,8 @@ async function getAndIncrementLocalCounter(): Promise<number> {
     await fs.writeFile(COUNTER_FILE_PATH, count.toString(), 'utf-8');
     
     return count;
-  } catch (error) {
-    console.error('Error with local counter:', error);
+  } catch (err) {
+    console.error('Error with local counter:', err);
     // If all else fails, return a static number
     return 42;
   }
@@ -76,8 +76,8 @@ export async function GET() {
       count, 
       source: 'redis' 
     } as VisitorCountResponse);
-  } catch (error: unknown) {
-    console.error('Redis error, falling back to local counter:', error);
+  } catch (err: unknown) {
+    console.error('Redis error, falling back to local counter:', err);
     
     // Use local file counter as fallback
     const localCount = await getAndIncrementLocalCounter();
