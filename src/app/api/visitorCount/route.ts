@@ -18,15 +18,20 @@ async function getAndIncrementLocalCounter(): Promise<number> {
     // Create data directory if it doesn't exist
     await fs.mkdir(path.join(process.cwd(), 'data'), { recursive: true });
     
-    // Try to read the current count
+    // Set default count
     let count = 1;
-    try {
+    
+    // Check if file exists and read it
+    const fileExists = await fs.access(COUNTER_FILE_PATH)
+      .then(() => true)
+      .catch(() => false);
+    
+    if (fileExists) {
       const data = await fs.readFile(COUNTER_FILE_PATH, 'utf-8');
-      count = parseInt(data.trim(), 10) + 1;
-      if (isNaN(count)) count = 1;
-    } catch (_) {
-      // File doesn't exist yet, start with 1
-      count = 1;
+      const parsedCount = parseInt(data.trim(), 10);
+      if (!isNaN(parsedCount)) {
+        count = parsedCount + 1;
+      }
     }
     
     // Write the incremented count back
@@ -76,7 +81,7 @@ export async function GET() {
       count, 
       source: 'redis' 
     } as VisitorCountResponse);
-  } catch (err: unknown) {
+  } catch (err) {
     console.error('Redis error, falling back to local counter:', err);
     
     // Use local file counter as fallback
