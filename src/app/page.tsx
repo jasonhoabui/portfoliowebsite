@@ -34,7 +34,7 @@ export default function Home() {
       const data = await response.json();
       if (data.isPlaying) {
         setCurrentTrack(`${data.title} by ${data.artist}`);
-        setSongUrl(data.url);
+        setSongUrl(data.songUrl);
       } else {
         setCurrentTrack(null);
         setSongUrl(null);
