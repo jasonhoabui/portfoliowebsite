@@ -61,11 +61,6 @@ export default function RootLayout({
                 </Link>
               </li>
               <li>
-                <Link href="/powerlifting" className="hover:text-blue-400 transition-colors underline decoration-blue-400">
-                  powerlifting
-                </Link>
-              </li>
-              <li>
                 <button 
                   onClick={toggleTheme} 
                   className="hover:text-blue-400 transition-colors flex items-center"
