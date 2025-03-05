@@ -10,6 +10,7 @@ export default function Home() {
   const [isDarkMode, setIsDarkMode] = useState(true);
   const [currentTrack, setCurrentTrack] = useState<string | null>(null);
   const [songUrl, setSongUrl] = useState<string | null>(null);
+  const [visitorCount, setVisitorCount] = useState(0);
 
   useEffect(() => {
     const checkTheme = () => {
@@ -50,6 +51,16 @@ export default function Home() {
     return () => clearInterval(interval);
   }, []);
 
+  useEffect(() => {
+    const fetchVisitorCount = async () => {
+      const response = await fetch('/api/visitorCount');
+      const data = await response.json();
+      setVisitorCount(data.count);
+    };
+
+    fetchVisitorCount();
+  }, []);
+
   return (
     <div className="max-w-6xl mx-auto px-16">
       <div className="mt-10 flex flex-col items-center gap-16">
@@ -75,6 +86,7 @@ export default function Home() {
             transition={{ duration: 0.5, delay: 0.1 }}
           >
             <span className="block text-blue-400 text-xl">jason bui</span>
+            <span className={`text-xs ${isDarkMode ? 'text-white' : 'text-black'}`}> visitors: <span className="text-blue-400">{visitorCount}</span></span>
           </motion.h1>
 
           <motion.p 
@@ -195,7 +207,6 @@ export default function Home() {
             i love to eat fast food, especially <span className="text-blue-400">wingstop</span>. my go-to order is an{' '}
             <span className="text-blue-400">all-in bundle</span> (6 hot honey tenders, 16 boneless sweet chili glaze, large lemon pepper fries).
           </motion.p>
-
           <div className="flex gap-6">
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
