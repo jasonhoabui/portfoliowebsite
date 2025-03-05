@@ -9,6 +9,7 @@ import { motion } from 'framer-motion';
 export default function Home() {
   const [isDarkMode, setIsDarkMode] = useState(true);
   const [currentTrack, setCurrentTrack] = useState<string | null>(null);
+  const [songUrl, setSongUrl] = useState<string | null>(null);
 
   useEffect(() => {
     const checkTheme = () => {
@@ -33,8 +34,10 @@ export default function Home() {
       const data = await response.json();
       if (data.isPlaying) {
         setCurrentTrack(`${data.title} by ${data.artist}`);
+        setSongUrl(data.url);
       } else {
         setCurrentTrack(null);
+        setSongUrl(null);
       }
     } catch (error) {
       console.error('Error fetching currently playing track:', error);
@@ -99,7 +102,16 @@ export default function Home() {
             transition={{ duration: 0.5, delay: 0.4 }}
           >
             <Music className={`mr-2 ${isDarkMode ? 'text-white' : 'text-black'}`} />
-            listening to {currentTrack ? currentTrack.toLowerCase() : ''}
+            listening to&nbsp;{currentTrack ? (
+              <a
+                href={songUrl || '#'}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-blue-400 transition-colors underline decoration-blue-300"
+              >
+                {currentTrack.toLowerCase()}
+              </a> 
+            ) : ''}
           </motion.p>
           <motion.p 
             className={`text-xs mb-4 flex items-center ${isDarkMode ? 'text-white' : 'text-black'}`}
