@@ -136,7 +136,7 @@ export default function Home() {
           >
             <Music className={`mr-2 ${isDarkMode ? 'text-white' : 'text-black'}`} />
             {isLoadingTrack ? (
-              'Loading track...'
+              'listening to'
             ) : currentTrack ? (
               <a
                 href={songUrl || '#'}
@@ -147,7 +147,7 @@ export default function Home() {
                 {currentTrack.toLowerCase()}
               </a>
             ) : (
-              'Not playing'
+              'listening to'
             )}
           </motion.p>
           <motion.p 
