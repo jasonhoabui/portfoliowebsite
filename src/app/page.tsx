@@ -169,7 +169,7 @@ export default function Home() {
             <a href="https://www.ucsb.edu/" target="_blank" rel="noopener noreferrer" className={`underline decoration-blue-400 hover:text-blue-300 ${isDarkMode ? 'text-white' : 'text-blue-400'}`}>
               ucsb
             </a>
-             majoring in{' '}
+              majoring in{' '}
             <a href="https://www.pstat.ucsb.edu/" target="_blank" rel="noopener noreferrer" className={`underline decoration-blue-400 hover:text-blue-300 ${isDarkMode ? 'text-white' : 'text-blue-400'}`}>
               statistics
             </a>
