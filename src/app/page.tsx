@@ -10,9 +10,7 @@ export default function Home() {
   const [isDarkMode, setIsDarkMode] = useState(true);
   const [currentTrack, setCurrentTrack] = useState<string | null>(null);
   const [songUrl, setSongUrl] = useState<string | null>(null);
-  const [visitorCount, setVisitorCount] = useState<number | null>(null);
   const [isLoadingTrack, setIsLoadingTrack] = useState(true);
-  const [isLoadingVisitorCount, setIsLoadingVisitorCount] = useState(true);
 
   useEffect(() => {
     const checkTheme = () => {
@@ -59,26 +57,6 @@ export default function Home() {
     return () => clearInterval(interval);
   }, []);
 
-  useEffect(() => {
-    const fetchAndIncrementVisitorCount = async () => {
-      setIsLoadingVisitorCount(true);
-      try {
-        const response = await fetch('/api/visitorCount');
-        if (!response.ok) {
-          throw new Error('Failed to fetch visitor count');
-        }
-        const data = await response.json();
-        setVisitorCount(data.count);
-      } catch (error) {
-        console.error('Error fetching visitor count:', error);
-      } finally {
-        setIsLoadingVisitorCount(false);
-      }
-    };
-
-    fetchAndIncrementVisitorCount();
-  }, []);
-
   return (
     <div className="max-w-6xl mx-auto px-16">
       <div className="mt-10 flex flex-col items-center gap-16">
@@ -104,9 +82,6 @@ export default function Home() {
           >
             <span className="block text-blue-400 text-xl">jason bui</span>
             <span className={`text-xs ${isDarkMode ? 'text-white' : 'text-black'}`}>
-              visitors: <span className="text-blue-400">
-                {isLoadingVisitorCount ? '' : visitorCount}
-              </span>
             </span>
           </motion.h1>
 
@@ -167,9 +142,9 @@ export default function Home() {
           >
             hi! i&apos;m <span className="text-blue-400">jason</span>, a <span className="text-blue-400">junior</span> at{' '}
             <a href="https://www.ucsb.edu/" target="_blank" rel="noopener noreferrer" className={`underline decoration-blue-400 hover:text-blue-300 ${isDarkMode ? 'text-white' : 'text-blue-400'}`}>
-              ucsb
+              ucsb 
             </a>
-              majoring in{' '}
+            {' '}majoring in{' '}
             <a href="https://www.pstat.ucsb.edu/" target="_blank" rel="noopener noreferrer" className={`underline decoration-blue-400 hover:text-blue-300 ${isDarkMode ? 'text-white' : 'text-blue-400'}`}>
               statistics
             </a>
@@ -230,7 +205,7 @@ export default function Home() {
             transition={{ duration: 0.5, delay: 1.0 }}
           >
             i love to eat fast food, especially <span className="text-blue-400">wingstop</span>. my go-to order is an{' '}
-            <span className="text-blue-400">all-in bundle</span> (6 hot honey tenders, 16 boneless sweet chili glaze, large lemon pepper fries).
+            <span className="text-blue-400">all-in bundle</span> (<span className="text-blue-400">6</span> hot honey tenders, <span className="text-blue-400">16</span> sweet chili glaze boneless wings, <span className="text-blue-400">large</span> lemon pepper fries).
           </motion.p>
           <div className="flex gap-6">
             <motion.div 
