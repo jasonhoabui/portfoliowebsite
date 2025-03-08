@@ -165,7 +165,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.6 }}
           >
-            i&apos;m currently a <span className="text-blue-400">junior</span> at{' '}
+            hi! i&apos;m jason, a <span className="text-blue-400">junior</span> at{' '}
             <a href="https://www.ucsb.edu/" target="_blank" rel="noopener noreferrer" className={`underline decoration-blue-400 hover:text-blue-300 ${isDarkMode ? 'text-white' : 'text-blue-400'}`}>
               ucsb
             </a>
