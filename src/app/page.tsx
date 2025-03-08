@@ -69,7 +69,7 @@ export default function Home() {
           <Image 
             src="/images/profile.jpg"
             alt="Profile"
-            className="absolute top-0 right-0 w-32 h-32 rounded-full object-cover"
+            className="absolute top-0 right-0 w-24 h-24 md:w-32 md:h-32 rounded-full object-cover"
             width={128}
             height={128}
           />
@@ -101,7 +101,7 @@ export default function Home() {
             transition={{ duration: 0.5, delay: 0.3 }}
           >
             <Building className={`mr-2 ${isDarkMode ? 'text-white' : 'text-black'}`} />
-            playing poker to pay rent
+            playing poker to pay rent and tuition
           </motion.p>
           <motion.p 
             className={`text-xs mb-4 flex items-center ${isDarkMode ? 'text-white' : 'text-black'}`}
@@ -122,7 +122,7 @@ export default function Home() {
                 {currentTrack.toLowerCase()}
               </a>
             ) : (
-              'listening to'
+              'not listening to music'
             )}
           </motion.p>
           <motion.p 
