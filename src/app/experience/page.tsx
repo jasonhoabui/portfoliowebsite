@@ -52,14 +52,14 @@ export default function Experience() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              incoming <span className="text-blue-400">data science intern</span> at {" "}
+              soon™ at {''}
               <a
-                href="https://datascience.uchicago.edu/"
+                href="https://jasonhoabui.vercel.app/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`underline decoration-blue-400 hover:text-blue-300 ${isDarkMode ? 'text-white' : 'text-blue-400'}`}
               >
-                uchicago dsi 
+                soon™ 
               </a>
             </motion.p>
             <motion.p 
@@ -68,7 +68,7 @@ export default function Experience() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
             >
-              summer 2025 - research under professor
+              soon™
             </motion.p>
             <br />
 
@@ -78,14 +78,14 @@ export default function Experience() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
             >
-              incoming <span className="text-blue-400">eureka scholar</span> at {" "}
+              soon™ at {''}
               <a
-                href="https://eureka.csep.ucsb.edu/"
+                href="https://jasonhoabui.vercel.app/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`underline decoration-blue-400 hover:text-blue-300 ${isDarkMode ? 'text-white' : 'text-blue-400'}`}
               >
-                ucsb csep
+                soon™
               </a>
             </motion.p>
             <motion.p 
@@ -94,7 +94,7 @@ export default function Experience() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.5 }}
             >
-              summer 2025 - research under professor
+              soon™
             </motion.p>
             <br />
 
@@ -104,14 +104,14 @@ export default function Experience() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.6 }}
             >
-              <span className="text-blue-400">accelerate fellow</span> at{" "}
+              soon™ at {''}
               <a
-                href="https://www.ibm.com/us-en"
+                href="https://jasonhoabui.vercel.app/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`underline decoration-blue-400 hover:text-blue-300 ${isDarkMode ? 'text-white' : 'text-blue-400'}`}
               >
-                ibm
+                soon™
               </a>
             </motion.p>
             <motion.p 
@@ -120,7 +120,7 @@ export default function Experience() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.7 }}
             >
-              summer 2024 - cloud computing, ai
+              soon™
             </motion.p>
           </motion.div>
 
