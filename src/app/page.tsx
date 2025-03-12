@@ -91,7 +91,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <MapPin className={`mr-2 ${isDarkMode ? 'text-white' : 'text-black'}`} />
+            <MapPin className={`mr-2 w-4 h-4 ${isDarkMode ? 'text-white' : 'text-black'}`} />
             garden grove, ca
           </motion.p>
           <motion.p 
@@ -100,7 +100,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
-            <Building className={`mr-2 ${isDarkMode ? 'text-white' : 'text-black'}`} />
+            <Building className={`mr-2 w-4 h-4 ${isDarkMode ? 'text-white' : 'text-black'}`} />
             playing poker to pay rent
           </motion.p>
           <motion.p 
@@ -109,7 +109,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
-            <Music className={`mr-2 ${isDarkMode ? 'text-white' : 'text-black'}`} />
+            <Music className={`mr-2 w-4 h-4 ${isDarkMode ? 'text-white' : 'text-black'}`} />
             {isLoadingTrack ? (
               'listening to'
             ) : currentTrack ? (
@@ -131,7 +131,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.5 }}
           >
-            <Layers className={`mr-2 ${isDarkMode ? 'text-white' : 'text-black'}`} />
+            <Layers className={`mr-2 w-4 h-4 ${isDarkMode ? 'text-white' : 'text-black'}`} />
             python, postgres, typescript
           </motion.p>
 
@@ -195,7 +195,7 @@ export default function Home() {
             <a href="https://www.instagram.com/freedatboyjayson/" target="_blank" rel="noopener noreferrer" className={`underline decoration-blue-400 hover:text-blue-300 ${isDarkMode ? 'text-white' : 'text-blue-400'}`}>
               powerlifting
             </a>
-            . at <span className="text-blue-400">160</span> lbs bw, i bench <span className="text-blue-400">230</span> lbs, squat{' '}
+            . at <span className="text-blue-400">150</span> lbs bw, i bench <span className="text-blue-400">230</span> lbs, squat{' '}
             <span className="text-blue-400">315</span> lbs, and deadlift <span className="text-blue-400">365</span> lbs.
           </motion.p>
 
@@ -205,7 +205,7 @@ export default function Home() {
             transition={{ duration: 0.5, delay: 1.0 }}
           >
             i love to eat fast food, especially <span className="text-blue-400">wingstop</span>. my go-to order is an{' '}
-            <span className="text-blue-400">all-in bundle</span> (<span className="text-blue-400">6</span> hot honey tenders, <span className="text-blue-400">16</span> sweet chili glaze boneless wings, <span className="text-blue-400">large</span> lemon pepper fries).
+            <span className="text-blue-400">all-in bundle</span> (<span className="text-blue-400">6</span> hot honey tenders, <span className="text-blue-400">16</span> sweet chili glaze boneless wings, <span className="text-blue-400">large</span> lemon pepper fries, and a <span className="text-blue-400">diet</span> coke).
           </motion.p>
           <div className="flex gap-6">
             <motion.div 
