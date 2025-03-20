@@ -241,17 +241,6 @@ export default function Home() {
                 email
               </Link>
             </motion.div>
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 1.4 }}
-            >
-              <Link href="/resume.pdf" target="_blank" rel="noopener noreferrer" 
-                className={`mt-2 text-l hover:text-blue-400 transition-colors underline decoration-blue-400 ${isDarkMode ? 'text-white' : 'text-black'}`}
-              >
-                resume
-              </Link>
-            </motion.div>
           </div>
         </motion.div>
       </div>
