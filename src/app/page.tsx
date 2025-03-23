@@ -111,7 +111,7 @@ export default function Home() {
           >
             <Music className={`mr-2 w-4 h-4 ${isDarkMode ? 'text-white' : 'text-black'}`} />
             {isLoadingTrack ? (
-              'listening to'
+              ''
             ) : currentTrack ? (
               <a
                 href={songUrl || '#'}
