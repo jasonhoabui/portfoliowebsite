@@ -156,9 +156,9 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.7 }}
           >
-            i&apos;m super interested in <span className="text-blue-400">machine learning</span>,{' '}
-            <span className="text-blue-400">applied probability</span>, and{' '}
-            <span className="text-blue-400">game theory</span>.
+            i&apos;m super interested in <span className="text-blue-400">risk management</span>,{' '}
+            <span className="text-blue-400">game theory</span>, and{' '}
+            <span className="text-blue-400">applied probability</span>.
           </motion.p>
 
           <motion.p className="mb-4 text-m break-words max-w-[700px]"
@@ -166,16 +166,16 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.8 }}
           >
-            most recently, i&apos;ve been diving into <span className="text-blue-400">poker theory</span>. i love to read about poker strategy and{' '}
+            most recently, i&apos;ve been diving into <span className="text-blue-400">poker</span>. i am currently reading{' '}
             <a 
-              href="https://blogs.cornell.edu/info2040/2021/11/03/game-theory-optimal-gto-texas-holdem-poker-theory/" 
+              href="https://en.wikipedia.org/wiki/Mike_Caro" 
               target="_blank" 
               rel="noopener noreferrer" 
               className={`underline decoration-blue-400 hover:text-blue-300 ${isDarkMode ? 'text-white' : 'text-blue-400'}`}
             >
-              gto
+              mike caro&apos;s
             </a>
-            . my favorite player to watch is {' '}
+            {' '}book of poker tells. my favorite player to watch is {' '}
             <a 
               href="https://en.wikipedia.org/wiki/Phil_Hellmuth" 
               target="_blank" 
