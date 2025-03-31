@@ -132,7 +132,7 @@ export default function Home() {
             transition={{ duration: 0.5, delay: 0.5 }}
           >
             <Layers className={`mr-2 w-4 h-4 ${isDarkMode ? 'text-white' : 'text-black'}`} />
-            python, postgres, typescript
+            python, postgres, r, typescript
           </motion.p>
 
           <motion.p className="mb-4 text-m break-words max-w-[700px]"
