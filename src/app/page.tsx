@@ -177,12 +177,12 @@ export default function Home() {
             </a>
             {' '}book of poker tells. my favorite player to watch is {' '}
             <a 
-              href="https://en.wikipedia.org/wiki/Phil_Hellmuth" 
+              href="https://highrollpoker.com/tracker/players/1475" 
               target="_blank" 
               rel="noopener noreferrer" 
               className={`underline decoration-blue-400 hover:text-blue-300 ${isDarkMode ? 'text-white' : 'text-blue-400'}`}
             >
-              phil hellmuth
+              alan keating
             </a>.
           </motion.p>
 
