@@ -101,7 +101,7 @@ export default function Home() {
             transition={{ duration: 0.5, delay: 0.3 }}
           >
             <Building className={`mr-2 w-4 h-4 ${isDarkMode ? 'text-white' : 'text-black'}`} />
-            playing poker to pay rent
+            recovering from poker addiction
           </motion.p>
           <motion.p 
             className={`text-xs mb-4 flex items-center ${isDarkMode ? 'text-white' : 'text-black'}`}
@@ -166,23 +166,23 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.8 }}
           >
-            most recently, i&apos;ve been diving into <span className="text-blue-400">poker</span>. i am currently reading{' '}
+            most recently, i&apos;ve been diving into <span className="text-blue-400">kdramas</span>. i am currently watching{' '}
             <a 
-              href="https://en.wikipedia.org/wiki/Mike_Caro" 
+              href="https://mydramalist.com/735043-life" 
               target="_blank" 
               rel="noopener noreferrer" 
               className={`underline decoration-blue-400 hover:text-blue-300 ${isDarkMode ? 'text-white' : 'text-blue-400'}`}
             >
-              mike caro&apos;s
+              when life gives you tangerines
             </a>
-            {' '}book of poker tells. my favorite player to watch is {' '}
+            {' '} but my favorite kdrama is {' '}
             <a 
-              href="https://highrollpoker.com/tracker/players/1475" 
+              href="https://mydramalist.com/694231-us-that-year" 
               target="_blank" 
               rel="noopener noreferrer" 
               className={`underline decoration-blue-400 hover:text-blue-300 ${isDarkMode ? 'text-white' : 'text-blue-400'}`}
             >
-              alan keating
+              our beloved summer
             </a>.
           </motion.p>
 
@@ -195,8 +195,8 @@ export default function Home() {
             <a href="https://www.instagram.com/freedatboyjayson/" target="_blank" rel="noopener noreferrer" className={`underline decoration-blue-400 hover:text-blue-300 ${isDarkMode ? 'text-white' : 'text-blue-400'}`}>
               powerlifting
             </a>
-            . at <span className="text-blue-400">150</span> lbs bw, i bench <span className="text-blue-400">230</span> lbs, squat{' '}
-            <span className="text-blue-400">315</span> lbs, and deadlift <span className="text-blue-400">365</span> lbs.
+            . at <span className="text-blue-400">150</span> lbs bw, i bench <span className="text-blue-400">245</span> lbs, squat{' '}
+            <span className="text-blue-400">330</span> lbs, and deadlift <span className="text-blue-400">385</span> lbs.
           </motion.p>
 
           <motion.p className="mb-4 text-m break-words max-w-[700px]"
