@@ -101,7 +101,7 @@ export default function Home() {
             transition={{ duration: 0.5, delay: 0.3 }}
           >
             <Building className={`mr-2 w-4 h-4 ${isDarkMode ? 'text-white' : 'text-black'}`} />
-            recovering from poker addiction
+            playing poker to pay rent
           </motion.p>
           <motion.p 
             className={`text-xs mb-4 flex items-center ${isDarkMode ? 'text-white' : 'text-black'}`}
