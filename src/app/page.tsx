@@ -166,23 +166,23 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.8 }}
           >
-            most recently, i&apos;ve been diving into <span className="text-blue-400">kdramas</span>. i am currently watching{' '}
+            most recently, i&apos;ve been diving into <span className="text-blue-400">korean dating reality shows</span>. i am currently watching{' '}
             <a 
-              href="https://mydramalist.com/735043-life" 
+              href="https://mydramalist.com/786614-heart-pairing" 
               target="_blank" 
               rel="noopener noreferrer" 
               className={`underline decoration-blue-400 hover:text-blue-300 ${isDarkMode ? 'text-white' : 'text-blue-400'}`}
             >
-              when life gives you tangerines
+              heart pairing
             </a>
-            {' '} but my favorite kdrama is {' '}
+            {' '} and {' '}
             <a 
-              href="https://mydramalist.com/694231-us-that-year" 
+              href="https://mydramalist.com/786926-better-late-than-single" 
               target="_blank" 
               rel="noopener noreferrer" 
               className={`underline decoration-blue-400 hover:text-blue-300 ${isDarkMode ? 'text-white' : 'text-blue-400'}`}
             >
-              our beloved summer
+              better late than single
             </a>.
           </motion.p>
 
@@ -204,8 +204,24 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 1.0 }}
           >
-            i love to eat fast food, especially <span className="text-blue-400">wingstop</span>. my go-to order is an{' '}
-            <span className="text-blue-400">all-in bundle</span> (<span className="text-blue-400">6</span> hot honey tenders, <span className="text-blue-400">16</span> sweet chili glaze boneless wings, <span className="text-blue-400">large</span> lemon pepper fries, and a <span className="text-blue-400">diet</span> coke).
+            i love to eat all types of food, but my favorites are <span className="text-blue-400">poke bowls</span> from {' '}
+            <a 
+              href="https://www.urokocafe.com/" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className={`underline decoration-blue-400 hover:text-blue-300 ${isDarkMode ? 'text-white' : 'text-blue-400'}`}
+            >
+              uroko cafe
+            </a>
+            {' '}and <span className="text-blue-400">tacos</span> from {' '}
+            <a 
+              href="https://www.tacosloscholos.net/" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className={`underline decoration-blue-400 hover:text-blue-300 ${isDarkMode ? 'text-white' : 'text-blue-400'}`}
+            >
+              tacos los cholos
+            </a>.
           </motion.p>
           <div className="flex gap-6">
             <motion.div 

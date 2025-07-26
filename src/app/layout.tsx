@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion'
-import Link from 'next/link'
+// import Link from 'next/link'
 import './globals.css'
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/react"
@@ -44,12 +44,12 @@ export default function RootLayout({
             transition={{ duration: 0.5 }}
             className="flex flex-wrap gap-3 md:gap-8 text-xs md:text-sm justify-center mr-0 md:mr-0 lowercase"
           >
-            <li>
+           {/* <li>
               <Link href="/" className="hover:text-blue-400 transition-colors underline decoration-blue-400">
                 home
               </Link>
             </li>
-            <li>
+             <li>
               <Link href="/research" className="hover:text-blue-400 transition-colors underline decoration-blue-400">
                 research
               </Link>
@@ -58,7 +58,7 @@ export default function RootLayout({
               <Link href="/experience" className="hover:text-blue-400 transition-colors underline decoration-blue-400">
                 experience
               </Link>
-            </li>
+            </li> */}
             <li>
               <button 
                 onClick={toggleTheme} 
