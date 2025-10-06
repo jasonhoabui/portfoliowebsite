@@ -223,7 +223,7 @@ export default function Home() {
               tacos los cholos
             </a>.
           </motion.p>
-          {/* <div className="flex gap-6">
+          <div className="flex gap-6">
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -257,7 +257,7 @@ export default function Home() {
                 email
               </Link>
             </motion.div>
-          </div> */}
+          </div>
         </motion.div>
       </div>
     </div>
