@@ -204,7 +204,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 1.0 }}
           >
-            i love to eat all types of food, but my favorites are <span className="text-blue-400">poke bowls</span> from {' '}
+            i love going out to eat. my favorite go-tos are <span className="text-blue-400"> salmon poke bowls</span> from {' '}
             <a 
               href="https://www.urokocafe.com/" 
               target="_blank" 
@@ -213,7 +213,7 @@ export default function Home() {
             >
               uroko cafe
             </a>
-            {' '}and <span className="text-blue-400">tacos</span> from {' '}
+            {' '}and <span className="text-blue-400">adobada tacos</span> from {' '}
             <a 
               href="https://www.tacosloscholos.net/" 
               target="_blank" 
@@ -223,7 +223,7 @@ export default function Home() {
               tacos los cholos
             </a>.
           </motion.p>
-          <div className="flex gap-6">
+          {/* <div className="flex gap-6">
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -257,7 +257,7 @@ export default function Home() {
                 email
               </Link>
             </motion.div>
-          </div>
+          </div> */}
         </motion.div>
       </div>
     </div>
