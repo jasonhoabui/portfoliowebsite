@@ -132,7 +132,7 @@ export default function Home() {
             transition={{ duration: 0.5, delay: 0.5 }}
           >
             <Layers className={`mr-2 w-4 h-4 ${isDarkMode ? 'text-white' : 'text-black'}`} />
-            python, postgres, r, typescript
+            python, postgres, r
           </motion.p>
 
           <motion.p className="mb-4 text-m break-words max-w-[700px]"
@@ -168,21 +168,21 @@ export default function Home() {
           >
             most recently, i&apos;ve been diving into <span className="text-blue-400">korean dating reality shows</span>. i am currently watching{' '}
             <a 
-              href="https://mydramalist.com/786614-heart-pairing" 
+              href="https://mydramalist.com/698705-change-days" 
               target="_blank" 
               rel="noopener noreferrer" 
               className={`underline decoration-blue-400 hover:text-blue-300 ${isDarkMode ? 'text-white' : 'text-blue-400'}`}
             >
-              heart pairing
+              change days
             </a>
             {' '} and {' '}
             <a 
-              href="https://mydramalist.com/786926-better-late-than-single" 
+              href="https://mydramalist.com/780226-exchange-season-4" 
               target="_blank" 
               rel="noopener noreferrer" 
               className={`underline decoration-blue-400 hover:text-blue-300 ${isDarkMode ? 'text-white' : 'text-blue-400'}`}
             >
-              better late than single
+              exchange season 4
             </a>.
           </motion.p>
 
@@ -196,7 +196,7 @@ export default function Home() {
               powerlifting
             </a>
             . at <span className="text-blue-400">150</span> lbs bw, i bench <span className="text-blue-400">245</span> lbs, squat{' '}
-            <span className="text-blue-400">330</span> lbs, and deadlift <span className="text-blue-400">385</span> lbs.
+            <span className="text-blue-400">330</span> lbs, and deadlift <span className="text-blue-400">405</span> lbs.
           </motion.p>
 
           <motion.p className="mb-4 text-m break-words max-w-[700px]"
