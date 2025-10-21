@@ -122,7 +122,7 @@ export default function Home() {
                 {currentTrack.toLowerCase()}
               </a>
             ) : (
-              'not listening to music'
+              'currently not listening to music'
             )}
           </motion.p>
           <motion.p 
