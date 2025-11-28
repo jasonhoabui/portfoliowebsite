@@ -156,9 +156,9 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.7 }}
           >
-            i&apos;m super interested in <span className="text-blue-400">risk management</span>,{' '}
-            <span className="text-blue-400">game theory</span>, and{' '}
-            <span className="text-blue-400">applied probability</span>.
+            i&apos;m super interested in <span className="text-blue-400">game theory</span>,{' '}
+            <span className="text-blue-400">decision science</span>, and{' '}
+            <span className="text-blue-400">risk management</span>.
           </motion.p>
 
           <motion.p className="mb-4 text-m break-words max-w-[700px]"
