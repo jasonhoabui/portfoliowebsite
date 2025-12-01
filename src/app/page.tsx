@@ -175,7 +175,7 @@ export default function Home() {
             >
               zetamac
             </a>
-            . my highest score is 56. i've also been dabbling around in {' '}
+            . my highest score is 56. i&apos;ve also been dabbling around in {' '}
             <a 
               href="https://books.google.com/books/about/A_Practical_Guide_to_Quantitative_Financ.html?id=LoTgwAEACAAJ&source=kp_book_description" 
               target="_blank" 
