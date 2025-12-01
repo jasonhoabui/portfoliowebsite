@@ -166,24 +166,25 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.8 }}
           >
-            most recently, i&apos;ve been diving into <span className="text-blue-400">korean dating reality shows</span>. i am currently watching{' '}
+            most recently, i&apos;ve been practicing my <span className="text-blue-400">mental arithmetic</span> through {' '}
             <a 
-              href="https://mydramalist.com/698705-change-days" 
+              href="https://arithmetic.zetamac.com/" 
               target="_blank" 
               rel="noopener noreferrer" 
               className={`underline decoration-blue-400 hover:text-blue-300 ${isDarkMode ? 'text-white' : 'text-blue-400'}`}
             >
-              change days
+              zetamac
             </a>
-            {' '} and {' '}
+            . my highest score is 56. i've also been dabbling around in {' '}
             <a 
-              href="https://mydramalist.com/780226-exchange-season-4" 
+              href="https://books.google.com/books/about/A_Practical_Guide_to_Quantitative_Financ.html?id=LoTgwAEACAAJ&source=kp_book_description" 
               target="_blank" 
               rel="noopener noreferrer" 
               className={`underline decoration-blue-400 hover:text-blue-300 ${isDarkMode ? 'text-white' : 'text-blue-400'}`}
-            >
-              exchange season 4
-            </a>.
+              >
+                 the green book
+                </a>
+                {' '}for fun.
           </motion.p>
 
           <motion.p className="mb-4 text-n break-words max-w-[700px]"
@@ -195,8 +196,8 @@ export default function Home() {
             <a href="https://www.instagram.com/freedatboyjayson/" target="_blank" rel="noopener noreferrer" className={`underline decoration-blue-400 hover:text-blue-300 ${isDarkMode ? 'text-white' : 'text-blue-400'}`}>
               powerlifting
             </a>
-            . at <span className="text-blue-400">150</span> lbs bw, i bench <span className="text-blue-400">245</span> lbs, squat{' '}
-            <span className="text-blue-400">330</span> lbs, and deadlift <span className="text-blue-400">405</span> lbs.
+            . at <span className="text-blue-400">145</span> lbs bw, i bench <span className="text-blue-400">245</span> lbs, squat{' '}
+            <span className="text-blue-400">330</span> lbs, and deadlift <span className="text-blue-400">405</span> lbs. i plan on competing in the near future.
           </motion.p>
 
           <motion.p className="mb-4 text-m break-words max-w-[700px]"
