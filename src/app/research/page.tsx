@@ -1,28 +1,8 @@
 'use client';
 
 import { motion } from 'framer-motion'
-import { useEffect, useState } from 'react';
 
 export default function Research() {
-  const [isDarkMode, setIsDarkMode] = useState(true);
-
-  useEffect(() => {
-    const checkTheme = () => {
-      const darkModeActive = document.body.classList.contains('dark');
-      setIsDarkMode(darkModeActive);
-    };
-
-    checkTheme();
-
-    const observer = new MutationObserver(checkTheme);
-    observer.observe(document.body, {
-      attributes: true,
-      attributeFilter: ['class']
-    });
-
-    return () => observer.disconnect();
-  }, []);
-
   return (
     <div className="max-w-6xl mx-auto px-16">
       <section className="mt-10 flex flex-col items-center">
@@ -30,7 +10,7 @@ export default function Research() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className={`w-full max-w-xl mx-auto relative ${isDarkMode ? 'text-gray-400' : 'text-gray-800'}`}
+          className={`w-full max-w-xl mx-auto relative text-gray-800`}
         >
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -46,7 +26,7 @@ export default function Research() {
               current research
             </motion.h2>
             <motion.p 
-              className={`text-l mb-6 ${isDarkMode ? 'text-white' : 'text-black'}`}
+              className={`text-l mb-6 text-black`}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
@@ -54,7 +34,7 @@ export default function Research() {
               soon™
             </motion.p>
             <motion.ul 
-              className={`list-disc ml-5 space-y-4 text-m ${isDarkMode ? 'text-white' : 'text-black'}`}
+              className={`list-disc ml-5 space-y-4 text-m text-black`}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
@@ -98,7 +78,7 @@ export default function Research() {
               research interests
             </motion.h2>
             <motion.p 
-              className={`text-l mb-6 ${isDarkMode ? 'text-white' : 'text-black'}`}
+              className={`text-l mb-6 text-black`}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.6 }}
@@ -106,7 +86,7 @@ export default function Research() {
               soon™
             </motion.p>
             <motion.ul 
-              className={`list-disc ml-5 space-y-4 text-m ${isDarkMode ? 'text-white' : 'text-black'}`}
+              className={`list-disc ml-5 space-y-4 text-m text-black`}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.7 }}

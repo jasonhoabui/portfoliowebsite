@@ -1,29 +1,8 @@
 'use client';
 
 import { motion } from 'framer-motion'
-import { useEffect, useState } from 'react';
 
 export default function Experience() {
-  const [isDarkMode, setIsDarkMode] = useState(true);
-
-  useEffect(() => {
-    const checkTheme = () => {
-      const darkModeActive = document.body.classList.contains('dark');
-      setIsDarkMode(darkModeActive);
-    };
-
-    checkTheme();
-
-
-    const observer = new MutationObserver(checkTheme);
-    observer.observe(document.body, {
-      attributes: true,
-      attributeFilter: ['class']
-    });
-
-    return () => observer.disconnect();
-  }, []);
-
   return (
     <div className="max-w-6xl mx-auto px-16">
       <section className="mt-10 flex flex-col items-center">
@@ -31,7 +10,7 @@ export default function Experience() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className={`w-full max-w-xl mx-auto relative ${isDarkMode ? 'text-white' : 'text-gray-800'}`}
+          className={`w-full max-w-xl mx-auto relative text-gray-800`}
         >
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
@@ -57,13 +36,13 @@ export default function Experience() {
                 href="https://jasonhoabui.vercel.app/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`underline decoration-blue-400 hover:text-blue-300 ${isDarkMode ? 'text-white' : 'text-blue-400'}`}
+                className={`underline decoration-blue-400 hover:text-blue-300 text-blue-400`}
               >
                 soon™ 
               </a>
             </motion.p>
             <motion.p 
-              className={`mb-4 text-xs break-words max-w-[700px] ${isDarkMode ? 'text-white' : 'text-black'}`}
+              className={`mb-4 text-xs break-words max-w-[700px] text-black`}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
@@ -83,13 +62,13 @@ export default function Experience() {
                 href="https://jasonhoabui.vercel.app/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`underline decoration-blue-400 hover:text-blue-300 ${isDarkMode ? 'text-white' : 'text-blue-400'}`}
+                className={`underline decoration-blue-400 hover:text-blue-300 text-blue-400`}
               >
                 soon™
               </a>
             </motion.p>
             <motion.p 
-              className={`mb-4 text-xs break-words max-w-[700px] ${isDarkMode ? 'text-white' : 'text-black'}`}
+              className={`mb-4 text-xs break-words max-w-[700px] text-black`}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.5 }}
@@ -109,13 +88,13 @@ export default function Experience() {
                 href="https://jasonhoabui.vercel.app/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`underline decoration-blue-400 hover:text-blue-300 ${isDarkMode ? 'text-white' : 'text-blue-400'}`}
+                className={`underline decoration-blue-400 hover:text-blue-300 text-blue-400`}
               >
                 soon™
               </a>
             </motion.p>
             <motion.p 
-              className={`text-xs ${isDarkMode ? 'text-white' : 'text-black'}`}
+              className={`text-xs text-black`}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.7 }}
@@ -144,7 +123,7 @@ export default function Experience() {
                 href="https://github.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`mr-5 underline decoration-blue-400 hover:text-blue-300 ${isDarkMode ? 'text-white' : 'text-blue-400'}`}
+                className={`mr-5 underline decoration-blue-400 hover:text-blue-300 text-blue-400`}
               >
                 live
               </a>
@@ -152,13 +131,13 @@ export default function Experience() {
                 href="https://github.com/jasonhoabui"
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`underline decoration-blue-400 hover:text-blue-300 ${isDarkMode ? 'text-white' : 'text-blue-400'}`}
+                className={`underline decoration-blue-400 hover:text-blue-300 text-blue-400`}
               >
                 github
               </a>
             </div>
           </motion.div>
-          <p className={`${isDarkMode ? 'text-white' : 'text-gray-600'}`}></p>
+          <p className={`text-gray-600`}></p>
 
           <motion.div 
             className="flex items-center pt-5"
@@ -172,7 +151,7 @@ export default function Experience() {
                 href="https://github.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`mr-5 underline decoration-blue-400 hover:text-blue-300 ${isDarkMode ? 'text-white' : 'text-blue-400'}`}
+                className={`mr-5 underline decoration-blue-400 hover:text-blue-300 text-blue-400`}
               >
                 live
               </a>
@@ -180,13 +159,13 @@ export default function Experience() {
                 href="https://github.com/jasonhoabui"
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`underline decoration-blue-400 hover:text-blue-300 ${isDarkMode ? 'text-white' : 'text-blue-400'}`}
+                className={`underline decoration-blue-400 hover:text-blue-300 text-blue-400`}
               >
                 github
               </a>
             </div>
           </motion.div>
-          <p className={`${isDarkMode ? 'text-white' : 'text-gray-600'}`}></p>
+          <p className={`text-gray-600`}></p>
 
           <motion.div 
             className="text-2xl pt-10 pb-5 text-blue-400"
@@ -208,14 +187,14 @@ export default function Experience() {
                 href="https://jasonhoabui.vercel.app/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`underline decoration-blue-400 hover:text-blue-300 ${isDarkMode ? 'text-white' : 'text-blue-400'}`}
+                className={`underline decoration-blue-400 hover:text-blue-300 text-blue-400`}
               >
                 soon™
               </a>
             </div>
           </motion.div>
           <motion.p 
-            className={`"mb-4 text-xs break-words max-w-[700px]" ${isDarkMode ? 'text-white' : 'text-gray-600'}`}
+            className={`"mb-4 text-xs break-words max-w-[700px]" text-gray-600`}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 1.3 }}
@@ -236,14 +215,14 @@ export default function Experience() {
                 href="https://jasonhoabui.vercel.app/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`underline decoration-blue-400 hover:text-blue-300 ${isDarkMode ? 'text-white' : 'text-blue-400'}`}
+                className={`underline decoration-blue-400 hover:text-blue-300 text-blue-400`}
               >
                 soon™
               </a>
             </div>
           </motion.div>
           <motion.p 
-            className={`text-xs ${isDarkMode ? 'text-white' : 'text-gray-600'}`}
+            className={`text-xs text-gray-600`}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 1.5 }}
@@ -264,14 +243,14 @@ export default function Experience() {
                 href="https://jasonhoabui.vercel.app/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`underline decoration-blue-400 hover:text-blue-300 ${isDarkMode ? 'text-white' : 'text-blue-400'}`}
+                className={`underline decoration-blue-400 hover:text-blue-300 text-blue-400`}
               >
                 soon™
               </a>
             </div>
           </motion.div>
           <motion.p 
-            className={`text-xs ${isDarkMode ? 'text-white' : 'text-gray-600'}`}
+            className={`text-xs text-gray-600`}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 1.7 }}
@@ -299,13 +278,13 @@ export default function Experience() {
                 href="https://devpost.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`underline decoration-blue-400 hover:text-blue-300 ${isDarkMode ? 'text-white' : 'text-blue-400'}`}
+                className={`underline decoration-blue-400 hover:text-blue-300 text-blue-400`}
               >
                 devpost
               </a>
             </div>
           </motion.div>
-          <p className={`${isDarkMode ? 'text-white' : 'text-gray-600'}`}></p>
+          <p className={`text-gray-600`}></p>
         </motion.div>
       </section>
     </div>

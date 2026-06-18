@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 255, 255, 255;
-  --background-rgb: 0, 0, 0;
+  --foreground-rgb: 0, 0, 0;
+  --background-rgb: 255, 255, 255;
 }
 
 body {
@@ -14,15 +14,4 @@ body {
   overflow-x: hidden;
   background-color: white;
   color: black;
-}
-
-body.dark {
-  background-color: black;
-  color: white;
-}
-
-@media (max-width: 768px) {
-  .min-h-screen {
-    padding-bottom: 16rem;
-  }
 }
