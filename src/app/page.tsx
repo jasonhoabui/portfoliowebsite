@@ -136,7 +136,7 @@ export default function Home() {
             animate="animate"
             transition={{ ...transition, delay: 0.44 }}
           >
-            i built my bankroll from $50 in dec &apos;24 to over $15k today. next goal: $2/5 live.
+            i built my bankroll from $50 in dec &apos;24 to over $25k today. next goal: $5/10 live.
           </motion.p>
         </motion.div>
 
